@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calender">
+            <div class="left">
+                <p id="date">13</p>
+                <p id="day">Sunday</p>
+            </div>
+            <div class="right">
+                <p id="month">January</p>
+                <p id="year">2024</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var date = document.getElementById('date');
+        var day = document.getElementById('day');
+        var month = document.getElementById('month');
+        var year = document.getElementById('year');
+        const today = new Date();
+        const Months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+        const wekkDays = ["Lundi", "mardi", "mercredi", "Jeudi", "vendredi", "Samedi", "dimanche"]
+
+        date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate();
+        day.innerHTML = wekkDays.getDay();
+        month.innerHTML = Months.getMonth();
+        year.innerHTML = today.getFullYear();
+
+    </script>
+</body>
+
+</html>
